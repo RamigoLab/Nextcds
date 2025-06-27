@@ -45,9 +45,11 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang="it" className={inter.variable}>
-      <body className={`bg-white text-gray-900 font-sans ${inter.variable}`}>
-        <main className="flex-grow min-h-screen">{children}</main>
-        <Footer />
+<body className="bg-white text-gray-900 font-sans">
+  <div className="flex flex-col min-h-screen">
+    <main className="flex-grow">{children}</main>
+    <Footer />
+  </div>
         <ToastContainer
           position="top-right"
           autoClose={3000}
